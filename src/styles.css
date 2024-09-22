@@ -1,6 +1,9 @@
 :root {
   --color-blue-strong: #1e3163;
   --color-blue-normal: #2d46b9;
+  --color-success: #366058;
+  --color-yellow: #ffaf00;
+  --color-green: #ababab;
   --color-pink: #f037a5;
   --color-white: #f8f8f8;
   --color-grayless: #f0f0f0;
@@ -54,6 +57,9 @@ section {
   .todo-list {
     width: 100vw;
     background-color: var(--color-grayless);
+    display: flex;
+    padding: 1rem 2.5rem;
+    gap: 1.2rem;
   }
 }
 
@@ -71,4 +77,44 @@ footer {
     align-items: center;
     text-decoration: none;
   }
+}
+
+.ToDo {
+  background-color: var(--color-blue-normal);
+  width: 32%;
+  border: 0.25rem solid var(--color-green);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Did {
+  background-color: var(--color-yellow);
+  width: 32%;
+  border: 0.25rem solid var(--color-green);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Done {
+  background-color: var(--color-success);
+  width: 32%;
+  border: 0.25rem solid var(--color-green);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--color-pink);
+  color: white;
+  font-weight: bold;
+  padding: 1.25rem 8.2rem;
+  text-align: center;
+  margin: 1rem 0.2rem;
+  border-radius: 0.5rem;
 }
