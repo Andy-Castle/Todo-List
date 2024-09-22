@@ -3,7 +3,7 @@
   --color-blue-normal: #2d46b9;
   --color-success: #366058;
   --color-yellow: #ffaf00;
-  --color-green: #ababab;
+  --color-gray: #ababab;
   --color-pink: #f037a5;
   --color-white: #f8f8f8;
   --color-grayless: #f0f0f0;
@@ -82,7 +82,7 @@ footer {
 .ToDo {
   background-color: var(--color-blue-normal);
   width: 32%;
-  border: 0.25rem solid var(--color-green);
+  border: 0.25rem solid var(--color-gray);
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@ footer {
 .Did {
   background-color: var(--color-yellow);
   width: 32%;
-  border: 0.25rem solid var(--color-green);
+  border: 0.25rem solid var(--color-gray);
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -102,7 +102,7 @@ footer {
 .Done {
   background-color: var(--color-success);
   width: 32%;
-  border: 0.25rem solid var(--color-green);
+  border: 0.25rem solid var(--color-gray);
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
