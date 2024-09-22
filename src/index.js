@@ -8,9 +8,9 @@ function CreateTemplate() {
             <div
               id="To_Do"></div>
           </div>
-          <div class="Did">
-            <h1>Did</h1>
-            <div id="Did"></div>
+          <div class="Doing">
+            <h1>Doing</h1>
+            <div id="Doing"></div>
           </div>
           <div class="Done">
             <h1>Done</h1>
