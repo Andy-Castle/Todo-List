@@ -100,11 +100,8 @@ function deleteTodoFromProject(projectId, todoId) {
 }
 
 function deleteProject(projectId) {
-  const index = arrayProjects.findIndex((proj) => proj.id === projectId);
-  if (index !== -1) {
-    arrayProjects.splice(index, 1);
-  }
-  console.log(arrayProjects);
+  let nuevoArray = arrayProjects.filter((obj) => obj.id !== projectId);
+  arrayProjects = nuevoArray;
 }
 
 const project = createProject("Comodin");
@@ -131,6 +128,10 @@ addTodoToProject(project, todo2);
 deleteTodoFromProject(1, 2);
 
 editTodoInProject(project.id, todo.id, "OK", "Nuevo contenido", "Alta", "Done");
+
+console.log(arrayProjects);
+
+deleteProject(2);
 
 console.log(arrayProjects);
 
