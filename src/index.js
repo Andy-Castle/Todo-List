@@ -1,5 +1,5 @@
 import "./styles.css";
-import project from "./project";
+import { arrayProjects, Project, TodosProject } from "./project&todos";
 
 const TodoList = document.getElementById("todo-list");
 
@@ -33,5 +33,3 @@ function addCard() {
 }
 
 addCard();
-
-// project();
