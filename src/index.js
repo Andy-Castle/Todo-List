@@ -1,5 +1,12 @@
 import "./styles.css";
-import { arrayProjects, Project, TodosProject } from "./project&todos";
+import {
+  arrayProjects,
+  Project,
+  TodosProject,
+  createProject,
+  createTodo,
+  addTodoToProject,
+} from "./project&todos";
 
 const TodoList = document.getElementById("todo-list");
 

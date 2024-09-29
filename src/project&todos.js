@@ -14,6 +14,14 @@ class Project {
       addTodo(todo) {
         this.todos.push(todo);
       },
+      editTodo(todoId, updatedTodo) {
+        const todoIndex = this.todos.findIndex((todo) => todo.id === todoId);
+        if (todoIndex !== -1) {
+          this.todos[todoIndex] = { ...this.todos[todoIndex], ...updatedTodo };
+          return true;
+        }
+        return false;
+      },
     };
   }
 }
@@ -39,20 +47,60 @@ class TodosProject {
   }
 }
 
-let project = new Project("Default");
+function createProject(nameProject) {
+  let newProject = new Project(nameProject);
+  arrayProjects.push(newProject);
+  return newProject;
+}
 
-let todo = new TodosProject(
-  "Add a list",
-  "First description",
-  "28/09/2024",
-  "Low",
-  "To Do"
+function createTodo(title, description, dueDate, priority, status) {
+  let newTodo = new TodosProject(title, description, dueDate, priority, status);
+  return newTodo;
+}
+
+function addTodoToProject(project, todo) {
+  project.addTodo(todo);
+}
+
+function editTodoInProject(
+  projectId,
+  todoId,
+  title,
+  description,
+  priority,
+  status
+) {
+  const project = arrayProjects.find((proj) => proj.id === projectId);
+  if (project) {
+    return project.editTodo(todoId, {
+      title: title,
+      description: description,
+      priority: priority,
+      status: status,
+    });
+  }
+  return false;
+}
+
+const project = createProject("Comodin");
+const todo = createTodo(
+  "Let's check",
+  "See if this works",
+  "29/09/2024",
+  "Medium",
+  "Doing"
 );
+addTodoToProject(project, todo);
 
-arrayProjects.push(project);
-
-project.addTodo(todo);
+editTodoInProject(project.id, todo.id, "OK", "Nuevo contenido", "Alta", "Done");
 
 console.log(arrayProjects);
 
-export { arrayProjects, Project, TodosProject };
+export {
+  arrayProjects,
+  Project,
+  TodosProject,
+  createProject,
+  createTodo,
+  addTodoToProject,
+};
