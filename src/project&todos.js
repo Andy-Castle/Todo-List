@@ -22,6 +22,14 @@ class Project {
         }
         return false;
       },
+      deleteTodo(todoId) {
+        const todoIndex = this.todos.findIndex((todo) => todo.id === todoId);
+        if (todoIndex !== -1) {
+          this.todos.splice(todoIndex, 1);
+          return true;
+        }
+        return false;
+      },
     };
   }
 }
@@ -82,7 +90,26 @@ function editTodoInProject(
   return false;
 }
 
+function deleteTodoFromProject(projectId, todoId) {
+  const project = arrayProjects.find((proj) => proj.id === projectId);
+
+  if (project) {
+    return project.deleteTodo(todoId);
+  }
+  return false;
+}
+
+function deleteProject(projectId) {
+  const index = arrayProjects.findIndex((proj) => proj.id === projectId);
+  if (index !== -1) {
+    arrayProjects.splice(index, 1);
+  }
+  console.log(arrayProjects);
+}
+
 const project = createProject("Comodin");
+const project2 = createProject("Comodin2");
+
 const todo = createTodo(
   "Let's check",
   "See if this works",
@@ -90,7 +117,18 @@ const todo = createTodo(
   "Medium",
   "Doing"
 );
+
+const todo2 = createTodo(
+  "Let's check",
+  "See if this works",
+  "29/09/2024",
+  "Medium",
+  "Doing"
+);
 addTodoToProject(project, todo);
+addTodoToProject(project, todo2);
+
+deleteTodoFromProject(1, 2);
 
 editTodoInProject(project.id, todo.id, "OK", "Nuevo contenido", "Alta", "Done");
 
@@ -103,4 +141,6 @@ export {
   createProject,
   createTodo,
   addTodoToProject,
+  editTodoInProject,
+  deleteTodoFromProject,
 };
