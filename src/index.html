@@ -8,13 +8,51 @@
   <body>
     <main>
       <header>
+        <div class="newTodo">
+          <dialog>
+            <div class="button-area">
+              <button autofocus>X</button>
+              <form onsubmit="return false">
+                <ul>
+                  <li>
+                    <label for="title">Title</label>
+                    <br />
+                    <input type="text" name="title" id="title" required />
+                  </li>
+                  <li>
+                    <label for="author">Author</label>
+                    <br />
+                    <input type="text" name="author" id="author" required />
+                  </li>
+                  <li>
+                    <label for="pages">Number of pages</label>
+                    <br />
+                    <input type="number" name="pages" id="pages" required />
+                  </li>
+                  <li>
+                    <label for="image">URL of image</label>
+                    <br />
+                    <input type="url" name="image" id="image" required />
+                  </li>
+                  <li>
+                    <label for="read">Read it?</label>
+                    <br />
+                    <input type="checkbox" name="read" id="read" value="true" />
+                  </li>
+                  <button id="add">Add</button>
+                </ul>
+              </form>
+            </div>
+          </dialog>
+          <button class="new-todo-button">New ToDo</button>
+        </div>
         <h1>Todo List</h1>
       </header>
       <section>
         <div class="menu">
           <div class="projects-section">
             <div class="createProject">
-              <form action="#">
+              <form onsubmit="return false">
                 <label for="project">New Project</label>
                 <input
                   type="text"
@@ -27,34 +65,7 @@
             <div class="projectToShow">
               <div class="projectCard">
                 <div class="cardProject">
-                  <h1>Titulo de projecto</h1>
-                  <button class="select">
-                    <img src="Public/icons/select.svg" alt="Select" />
-                  </button>
-                  <button class="delete">
-                    <img src="Public/icons/delete.svg" alt="delete" />
-                  </button>
-                </div>
-                <div class="cardProject">
-                  <h1>Titulo de projecto</h1>
-                  <button class="select">
-                    <img src="Public/icons/select.svg" alt="Select" />
-                  </button>
-                  <button class="delete">
-                    <img src="Public/icons/delete.svg" alt="delete" />
-                  </button>
-                </div>
-                <div class="cardProject">
-                  <h1>Titulo de projecto</h1>
-                  <button class="select">
-                    <img src="Public/icons/select.svg" alt="Select" />
-                  </button>
-                  <button class="delete">
-                    <img src="Public/icons/delete.svg" alt="delete" />
-                  </button>
-                </div>
-                <div class="cardProject">
-                  <h1>Titulo de projecto</h1>
+                  <h1>Default Project</h1>
                   <button class="select">
                     <img src="Public/icons/select.svg" alt="Select" />
                   </button>

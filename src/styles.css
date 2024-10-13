@@ -27,6 +27,7 @@ main {
 
 header {
   display: flex;
+
   justify-content: center;
   align-items: center;
   background-color: var(--color-blue-strong);
@@ -34,6 +35,7 @@ header {
   h1 {
     font-style: italic;
     font-size: 2.4rem;
+    width: 57vw;
   }
 }
 
@@ -175,3 +177,124 @@ footer {
   margin: 1rem 0.2rem;
   border-radius: 0.5rem;
 }
+
+.newTodo {
+  display: flex;
+  width: 44vw;
+  padding: 1rem;
+  color: black;
+}
+
+.new-todo-button {
+  padding: 0.8rem 1.5rem;
+  border: 0.25rem solid white;
+  border-radius: 0.5rem;
+  background-color: #2d2d2d;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.new-todo-button:hover {
+  background-color: rgb(159, 159, 0);
+  color: black;
+  border: 0.25rem solid whitesmoke;
+}
+
+/*  */
+
+.form-button {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin: 8px 0px;
+}
+
+dialog {
+  width: 275px;
+  margin: auto;
+  background-color: whitesmoke;
+  color: black;
+}
+
+dialog[open] {
+  scale: 1;
+  transition: scale 0.3s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+
+  @starting-style {
+    scale: 0;
+  }
+
+  form {
+    label {
+      color: black;
+    }
+
+    input {
+      color: black;
+    }
+  }
+}
+
+/* form {
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
+
+form input {
+  border-radius: 5px;
+  padding: 2px;
+}
+
+form button {
+  padding: 4px 10px;
+  border-radius: 4px;
+  background-color: #88d66c;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  color: black;
+}
+
+form button:hover {
+  background-color: #5a8c48;
+}
+
+.button-area {
+  display: flex;
+  width: 240px;
+  justify-content: flex-end;
+}
+
+.button-area > button {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f6fb7a;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.button-area > button:hover {
+  background-color: #717238;
+} */

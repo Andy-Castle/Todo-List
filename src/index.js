@@ -10,6 +10,18 @@ import {
 
 const TodoList = document.getElementById("todo-list");
 
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("dialog + button");
+const closeButton = document.querySelector("dialog button");
+
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+
 // function CreateTemplate() {
 //   TodoList.innerHTML = `<div class="ToDo">
 //             <h1>To Do</h1>
