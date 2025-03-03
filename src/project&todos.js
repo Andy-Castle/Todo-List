@@ -1,9 +1,8 @@
 let arrayProjects = [];
 
 class Project {
-  static id = 0;
   constructor(name) {
-    this.id = ++Project.id;
+    this.id = Date.now();
     this.name = name;
     this.todos = [];
 
@@ -35,9 +34,8 @@ class Project {
 }
 
 class TodosProject {
-  static id = 0;
   constructor(title, description, dueDate, priority, status) {
-    this.id = ++TodosProject.id;
+    this.id = Date.now() + 1;
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
@@ -70,14 +68,7 @@ function addTodoToProject(project, todo) {
   project.addTodo(todo);
 }
 
-function editTodoInProject(
-  projectId,
-  todoId,
-  title,
-  description,
-  priority,
-  status
-) {
+function editTodoInProject(projectId, todoId, title, description, priority, status) {
   const project = arrayProjects.find((proj) => proj.id === projectId);
   if (project) {
     return project.editTodo(todoId, {

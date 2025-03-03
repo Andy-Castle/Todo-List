@@ -8,10 +8,15 @@
   <body>
     <main>
       <header>
-        <div class="newTodo">
-          <dialog>
-            <div class="button-area">
-              <button autofocus>X</button>
+        <h1>Todo List</h1>
+      </header>
+      <section>
+        <div class="menu">
+          <div class="newTodo">
+            <dialog>
+              <div class="close-area">
+                <button autofocus>X</button>
+              </div>
               <form onsubmit="return false">
                 <ul>
                   <li>
@@ -20,61 +25,19 @@
                     <input type="text" name="title" id="title" required />
                   </li>
                   <li>
-                    <label for="author">Author</label>
+                    <label for="description">Description</label>
                     <br />
-                    <input type="text" name="author" id="author" required />
-                  </li>
-                  <li>
-                    <label for="pages">Number of pages</label>
-                    <br />
-                    <input type="number" name="pages" id="pages" required />
-                  </li>
-                  <li>
-                    <label for="image">URL of image</label>
-                    <br />
-                    <input type="url" name="image" id="image" required />
-                  </li>
-                  <li>
-                    <label for="read">Read it?</label>
-                    <br />
-                    <input type="checkbox" name="read" id="read" value="true" />
+                    <input
+                      type="text"
+                      name="description"
+                      id="description"
+                      required />
                   </li>
                   <button id="add">Add</button>
                 </ul>
               </form>
-            </div>
-          </dialog>
-          <button class="new-todo-button">New ToDo</button>
-        </div>
-        <h1>Todo List</h1>
-      </header>
-      <section>
-        <div class="menu">
-          <div class="projects-section">
-            <div class="createProject">
-              <form onsubmit="return false">
-                <label for="project">New Project</label>
-                <input
-                  type="text"
-                  id="project"
-                  name="project"
-                  placeholder="Enter a project" />
-                <button type="submit">New Project</button>
-              </form>
-            </div>
-            <div class="projectToShow">
-              <div class="projectCard">
-                <div class="cardProject">
-                  <h1>Default Project</h1>
-                  <button class="select">
-                    <img src="Public/icons/select.svg" alt="Select" />
-                  </button>
-                  <button class="delete">
-                    <img src="Public/icons/delete.svg" alt="delete" />
-                  </button>
-                </div>
-              </div>
-            </div>
+            </dialog>
+            <button class="new-todo-button">New ToDo</button>
           </div>
           <footer>
             <a
@@ -86,22 +49,6 @@
               &copy; Andy-Castle
             </a>
           </footer>
-        </div>
-        <div class="todo-list" id="todo-list">
-          <div class="ToDo">
-            <h1>To Do</h1>
-            <div id="To_Do">
-              <div id="1" class="card">Thing</div>
-            </div>
-          </div>
-          <div class="Doing">
-            <h1>Doing</h1>
-            <div id="Doing"></div>
-          </div>
-          <div class="Done">
-            <h1>Done</h1>
-            <div id="Done"></div>
-          </div>
         </div>
       </section>
     </main>
